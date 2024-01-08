@@ -1,0 +1,52 @@
+# самостоятельное решение
+def answer():
+    first = int(input('Введите год рождения Пушкина А.С.: '))
+    while first != 1799:
+        first = int(input('Введите год рождения Пушкина А.С.: '))
+
+        if first > 1799:
+            print('Неверно. Он родился раньше')
+        elif first < 1799:
+            print('Неверно. Он родился позднее')
+        else:
+            print('Верно!')
+    return first
+    pass
+
+def answer2():
+    second = float(input('Введите (дд.мм) день и месяц рождения Пушкина А.С.: '))
+    while second != 06.06:
+        second = float(input('Введите (дд.мм) день и месяц рождения Пушкина А.С.: '))
+
+        if second != 06.06:
+            print('В какой день июня родился Пушкин А.С?')
+        else:
+
+            print('Верно')
+    return second
+    pass
+
+# answer()
+# answer2()
+# print('Дата рождения Пушкина А.С. : ', '06.06.1799')
+
+'''решение после просмотра "разбора"
+######################################################################################
+'''
+def ask_puskin(question, date):
+    answer_gold = int(input(question))
+    while answer_gold != date:
+        if answer_gold > date:
+            print('Pushkin was born earlier')
+        elif answer_gold < date:
+            print('Pushkin was born later')
+        else:
+            print('True')
+        answer_gold = int(input(question))
+    pass
+
+ask_puskin('Do you know birth year of Pushkin A.S ? :YYYY ', 1799)
+ask_puskin('Do you know birth month of Pushkin A.S ? :MM ', 6)
+ask_puskin('Do you know birth day of Pushkin A.S ? :DD ', 6)
+
+print('Great! Pushkin A.S. birth day 06.06.1799')
